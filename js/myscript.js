@@ -13,10 +13,10 @@ if(passengerAge < 18) {
     result = travelCost ;
 }
 
-let rounded = Math.round((result + Number.EPSILON) * 100) / 100;
+let rounded  = Math.round((result + Number.EPSILON) * 100) / 100;
 console.log(rounded);
 
-document.getElementById("TiketAmount"). innerHTML = rounded;
+document.getElementById("TiketAmount"). innerHTML = rounded + " euro" ;
 
 
 
