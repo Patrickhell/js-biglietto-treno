@@ -6,17 +6,15 @@ const passengerAge = parseInt(prompt("Quanti Anni ha?"));
 let result;
 
 if(passengerAge < 18) {
-    result = travelCost - ((20/100) * travelCost ) ;
+    result = travelCost - ((20/100) * travelCost ).toFixed(1) ;
 } else if(passengerAge > 65) {
-    result = travelCost - ((40/100) * travelCost ) ;
+    result = travelCost - ((40/100) * travelCost ) .toFixed(0) ;
 } else {
-    result = travelCost ;
+    result = travelCost .toFixed(2);
 }
 
-let rounded  = Math.round((result + Number.EPSILON) * 100) / 100;
-console.log(rounded);
-
-document.getElementById("TiketAmount"). innerHTML = rounded + " euro" ;
+console.log(result );
+document.getElementById("TiketAmount"). innerHTML = result + " euro" ;
 
 
 
